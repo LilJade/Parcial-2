@@ -6,6 +6,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.google.gson.Gson;
 import com.lilJade.dao.TbConsultaDao;
@@ -59,13 +60,20 @@ public class servletControl extends HttpServlet {
 			tbc.setApellido(apellido);
 			
 			tbcd.actualizarConsulta(tbc);
+			
+			response.sendRedirect("index.jsp");
 		} else if(acttion.equals("ELIMINAR")){
-			tbc.setId(Integer.parseInt(id));
-
-			tbcd.eliminarConsulta(tbc);
+			HttpSession seccionPrincipal = (HttpSession) request.getSession();
+			String sectionVarUsser = (String) seccionPrincipal.getAttribute("usuario");
+			if(sectionVarUsser == null){
+				response.sendRedirect("index.jsp");
+			}else {
+				tbc.setId(Integer.parseInt(id));
+				tbcd.eliminarConsulta(tbc);
+				
+				response.sendRedirect("index.jsp");
+			}
 		}
-		
-		response.sendRedirect("index.jsp");
 	}
 
 	/**
