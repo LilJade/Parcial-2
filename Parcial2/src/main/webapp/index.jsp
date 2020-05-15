@@ -53,7 +53,7 @@
 		</table>
 	</div>
 	<footer>
-		<span>Developer By LilJade</span>
+		<h4>Developer By LilJade</h4>
 	</footer>
 </body>
 </html>
