@@ -42,9 +42,9 @@
 	<div class="content">
 		<table class="table table-dark" id="tablaDatos">
 			<thead>
-				<th>Apellido</th>
-				<th>Nombre</th>
-				<th>Id</th>
+				<th>APELLIDO</th>
+				<th>NOMBRE</th>
+				<th>ID</th>
 				<th>OPCIONES</th>
 			</thead>
 			<tbody>

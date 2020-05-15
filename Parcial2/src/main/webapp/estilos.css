@@ -3,7 +3,7 @@
 	padding: 0;
 	box-sizing: border-box;
 	font-family: sans-serif;
-	overflow-x: hidden;
+	overflow: hidden;
 }
 
 .head{
@@ -125,12 +125,63 @@
 	background-color: #b7472a;
 }
 
+.contentFrm{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	padding: 50px;
+	margin: 20px;
+}
+
 .frmSrv{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	width: 90%;
+	width: 60%;
+	overflow: hidden;
+}
+
+.frmSrv .rotulo{
+	width: 50%;
+	padding: 5px;
+	margin-top: 10px;
+	text-align: left;
+	font-size: 26px;
+	font-weight: bold;
+}
+
+.frmSrv .control{
+	width: 50%;
+	padding: 5px;
+	margin: 10px 0;
+	border-radius: 10px;
+	border: 1px solid grey;
+	font-size: 22px;
+}
+
+.frmSrv .btn{
+	text-decoration: none;
+	text-align:center;
+	width: 45%;
+	padding: 10px;
+	margin: 10px 0;
+	border-radius: 20px;
+	border: 1px solid black;
+	font-weight: bold;
+	font-size: 20px;
+	color: #FFF;
+	transition: all 300ms;
+	overflow: hidden;
+}
+
+.frmSrv .btn:hover{
+	cursor: pointer;
+	transition: all 300ms;
+	transform: scale(1.1);
+	overflow: hidden;
 }
 
 footer{
